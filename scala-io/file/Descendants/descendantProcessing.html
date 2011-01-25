@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+      <title>Descendants</title>
+      <script type="text/javascript" src="../../js/shCore.js"></script><script type="text/javascript" src="../../js/shBrushScala.js"></script><link href="../../css/shCore.css" type="text/css" rel="stylesheet"></link><link href="../../css/shThemeDefault.css" type="text/css" rel="stylesheet"></link><link href="../../css/samples.css" type="text/css" rel="stylesheet"></link>
+    </head>
+    <body>
+      <div id="maincontainer">
+        <div id="topsection">
+          <div class="innertube">
+            <span>
+        <h1>Descendants</h1>
+        <p class="summary"></p>
+      </span>
+          </div>
+        </div>
+
+        <div id="contentwrapper">
+          <div id="contentcolumn">
+            <div class="innertube">
+              <span>
+        
+        <div class="example">
+      <a name="descendantProcessing.html"><h3>Descendant Processing</h3></a>
+      <div class="example_summary"><span> Walk the directory tree </span></div>
+      <div class="example_code">
+        <pre class="brush: scala">
+    val path:Path = Path(&quot;/tmp/&quot;)
+
+    // by default only the files contained in the current path are returned but if depth
+    // is set (&amp;lt;0 will traverse entire tree) then the stream will visit subdirectories in
+    // pre-order traversal
+
+    // search for a .gitignore file down to a depth of 4
+    val gitIgnoreRestrictedTree: Option[Path] = path.descendants (depth=4).find (_.name == &quot;.gitignore&quot;)
+
+    // search for a .gitignore in the entire subtree
+    val gitIgnoreFullTree: Option[Path] = path.descendants ().find (_.name == &quot;.gitignore&quot;)
+
+    // search for the .git directory and println all files from that directory and below up to
+    // a depth of 10 and does it on a locked directory
+
+    // this method creates the filters that are used to filter each query for a directories contents
+    // origin is the originating path (in this example it is path)
+    // relativePath is the path relative from origin to the path that will be contained in the PathSet
+    // In this example if the depth == 1 (shown by the length of the relativePath) then only the .git directory is accepted
+    // All other directories that are traversed will not be filtered
+    def filters (origin:Path, relativePath:Path) = {
+      if (relativePath.segments.length &gt; 1) None
+      else Some(relativePath.matcher(&quot;.git&quot;))
+    }
+
+/*
+ * Disabled until the Java 7 version because it can't be implemented until then
+    path.secureTree (filters,  10 ) match {
+      case Some(stream)  =&gt; stream.foreach (e =&gt; println (e.path))
+      case None =&gt; throw new AssertionError (&quot;This filesystem does not support SecureDirectoryStream!&quot;)
+    }
+*/
+  
+</pre>
+      </div>
+    </div>
+      </span>
+            </div>
+          </div>
+        </div>
+
+        <div id="leftcolumn">
+          <div class="innertube">
+            <div id="navcontainer">
+      <ul id="projectnavlist"><li><a href="../../core/index.html" title="An idiomatic IO library for Scala" class="">Core</a>
+          
+        </li><li><a href="../../file/index.html" title="An adaptation of the Java NIO2 Filesystem to Scala" class="active">File</a>
+          <ul id="navlist"><li><a href="../../file/create-temp/index.html" title=" Creating Temporary Files and directories ">Create Temp</a></li><li>
+                      <a href="../../file/Descendants/index.html" title="" class="active">Descendants</a>
+                      <ul id="subnavlist"><li>
+        <a href="descendantProcessing.html" title=" Walk the directory tree " class="active">Descendant Processing</a>
+      </li></ul>
+                    </li><li><a href="../../file/execute/index.html" title="">Execute</a></li><li><a href="../../file/read-write-files/index.html" title=" A Path are both Input and Output objects as well as Seekable so all read/write options available th...">Read Write Files</a></li><li><a href="../../file/create-paths/index.html" title="">Create Paths</a></li><li><a href="../../file/roots/index.html" title="">Roots</a></li><li><a href="../../file/standard-path-operations/index.html" title=" Common/simple Path operations Nothing too fancy here">Standard Path Operations</a></li><li><a href="../../file/creating-pathsets/index.html" title="">Creating Pathsets</a></li><li><a href="../../file/path-matcher/index.html" title="">Path Matcher</a></li><li><a href="../../file/samples/index.html" title=" This file contains code samples illustrating how to use the Scala IO API">Samples</a></li><li><a href="../../file/implicits/index.html" title="">Implicits</a></li><li><a href="../../file/create-move-files-directories/index.html" title="">Create Move Files Directories</a></li><li><a href="../../file/Children/index.html" title=" Search the contents of a directory and perform operations on the objects encountered ">Children</a></li><li><a href="../../file/create-delete-files-and-directory/index.html" title="">Create Delete Files And Directory</a></li></ul>
+        </li></ul>
+    </div>
+          </div>
+        </div>
+
+        <div id="footer">
+          <div>Written by Jesse Eichar <a href="http://camptocamp.com">Camptocamp SA</a></div>
+          <div>Twitter: <a href="http://twitter.com/jeichar">@jeichar</a></div>
+          <div>(c) Jesse Eichar 2010-2011</div>
+        </div>
+      </div>
+      <script type="text/javascript">
+          SyntaxHighlighter.all()
+        </script>
+    </body>
+  </html>

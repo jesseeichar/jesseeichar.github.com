@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+      <title>Core</title>
+      <link href="../css/samples.css" type="text/css" rel="stylesheet"></link>
+    </head>
+    <body>
+      <div id="maincontainer">
+        <div id="topsection">
+          <div class="innertube">
+            <h1>Core</h1><p class="summary">An idiomatic IO library for Scala</p>
+          </div>
+        </div>
+
+        <div id="contentwrapper">
+          <div id="contentcolumn">
+            <div class="innertube">
+              <div class="page">
+                        <a href="../core/basic-read-write/index.html">
+                          <h3>Basic Read Write</h3>
+                          <p class="page_summary"> These examples are a quick introduction to performing basic IO using the Scala IO API</p>
+                        </a>
+                        <div class="page_examples">
+                        <div class="example_excerpt">
+                                <a href="../core/basic-read-write/javaToScalaRightWay.html">
+                                  <h3>Java To Scala Right Way</h3>
+                                  <div class="example_excerpt_summary"><span> The right way to convert java IO objects to Scala IO objects </span></div>
+                                </a>
+                              </div><div class="example_excerpt">
+                                <a href="../core/basic-read-write/javaToScalaWrongWay.html">
+                                  <h3>Java To Scala Wrong Way</h3>
+                                  <div class="example_excerpt_summary"><span> A discouraged method of creating Scala IO objects from java objects </span></div>
+                                </a>
+                              </div><div class="example_excerpt">
+                                <a href="../core/basic-read-write/basicInput.html">
+                                  <h3>Basic Input</h3>
+                                  <div class="example_excerpt_summary"><span> Examples of basic IO </span></div>
+                                </a>
+                              </div><div class="example_excerpt">
+                                <a href="../core/basic-read-write/basicOutput.html">
+                                  <h3>Basic Output</h3>
+                                  <div class="example_excerpt_summary"><span> Basic output options </span></div>
+                                </a>
+                              </div><div class="example_excerpt">
+                                <a href="../core/basic-read-write/bufferedIO.html">
+                                  <h3>Buffered I O</h3>
+                                  <div class="example_excerpt_summary"><span> Demonstration of how to convert Input/Output to buffered counterparts </span></div>
+                                </a>
+                              </div><div class="example_excerpt">
+                                <a href="../core/basic-read-write/usingCodecs.html">
+                                  <h3>Using Codecs</h3>
+                                  <div class="example_excerpt_summary"><span> When converting bytes to and from characters a Codec is needed for the encoding and decoding.  Unlike Java Scala IO does not have a default it requires that the Codec be declared.  However, to simplify the declaration most methods have implicit codec parameters so the Codec only needs to be declared once.  The following examples show reading characters from input streams.  Writing is follows the same pattern </span></div>
+                                </a>
+                              </div><div class="example_excerpt">
+                                <a href="../core/basic-read-write/readCsvFile.html">
+                                  <h3>Read Csv File</h3>
+                                  <div class="example_excerpt_summary"><span> read comma separated file </span></div>
+                                </a>
+                              </div><div class="example_excerpt">
+                                <a href="../core/basic-read-write/addAllBytes.html">
+                                  <h3>Add All Bytes</h3>
+                                  <div class="example_excerpt_summary"><span> add all bytes in stream together </span></div>
+                                </a>
+                              </div><div class="example_excerpt">
+                                <a href="../core/basic-read-write/loadIntoMemory.html">
+                                  <h3>Load Into Memory</h3>
+                                  <div class="example_excerpt_summary"><span> quickly (and unsafely) load all data into memory </span></div>
+                                </a>
+                              </div><div class="example_excerpt">
+                                <a href="../core/basic-read-write/allChars.html">
+                                  <h3>All Chars</h3>
+                                  <div class="example_excerpt_summary"><span> iterate over all character in file </span></div>
+                                </a>
+                              </div><div class="example_excerpt">
+                                <a href="../core/basic-read-write/printLines.html">
+                                  <h3>Print Lines</h3>
+                                  <div class="example_excerpt_summary"><span> read and print out all lines from a URL </span></div>
+                                </a>
+                              </div><div class="example_excerpt">
+                                <a href="../core/basic-read-write/moreOnWriting.html">
+                                  <h3>More On Writing</h3>
+                                  <div class="example_excerpt_summary"><span> several examples of writing data </span></div>
+                                </a>
+                              </div></div>
+                      </div><div class="page">
+                        <a href="../core/resources/index.html">
+                          <h3>Resources</h3>
+                          <p class="page_summary"> Examples of using the Resource API to wrap existing Java IO objects</p>
+                        </a>
+                        <div class="page_examples">
+                        <div class="example_excerpt">
+                                <a href="../core/resources/createResources.html">
+                                  <h3>Create Resources</h3>
+                                  <div class="example_excerpt_summary"><span> Several examples of creating Resources </span></div>
+                                </a>
+                              </div><div class="example_excerpt">
+                                <a href="../core/resources/usingIoResources.html">
+                                  <h3>Using Io Resources</h3>
+                                  <div class="example_excerpt_summary"><span> The typical IO objects are java IO objects converted into Resource objects using the Resource object's factory methods.  Once a Resource has been created there are methods for converting between them.  <p> The following examples demonstrate using the Resource objects and converting between them.  </p><p> All resources are also Seekable, Input, Output, ReadChars and/or WriteChars so all normal IO operations are possible but the following examples are Resource only operations</p></span></div>
+                                </a>
+                              </div></div>
+                      </div><div class="page">
+                        <a href="../core/writing-with-typeclasses/index.html">
+                          <h3>Writing With Typeclasses</h3>
+                          <p class="page_summary"> Details on how output is converted to bytes and how the design can be extended and used</p>
+                        </a>
+                        <div class="page_examples">
+                        <div class="example_excerpt">
+                                <a href="../core/writing-with-typeclasses/theCommonCases.html">
+                                  <h3>The Common Cases</h3>
+                                  <div class="example_excerpt_summary"><span> The write method of Output and Seekable objects accepts several types of inputs with no effort required on the part of a developer.  Several of the default types including integers, longs, doubles, etc...  are have converter implementations.  </span></div>
+                                </a>
+                              </div><div class="example_excerpt">
+                                <a href="../core/writing-with-typeclasses/intsAsBytes.html">
+                                  <h3>Ints As Bytes</h3>
+                                  <div class="example_excerpt_summary"><span> In Java when you write an Integer to an OuputStream that integer is treated as a byte and only the lowest value byte of the int is written.  <p>Scala IO differs in that an integer is written as 4 bytes and one must explicitely coerce an Int to a byte.  The following examples demostrate how one might do that.</p></span></div>
+                                </a>
+                              </div><div class="example_excerpt">
+                                <a href="../core/writing-with-typeclasses/writingArrays.html">
+                                  <h3>Writing Arrays</h3>
+                                  <div class="example_excerpt_summary"><span> Writing Arrays is a special situation because of how Java and Scala use arrays.  For performance Scala uses the Java Array object and coerces them into Traversable objects when the Scala collections methods are needed.  However the implicit resolution will not choose a TraversableConverter.  Fortunately Scala IO provides several Converters for converting Arrays to bytes.  <p> The point of this example is explain that if one is creating a custom converter he will have to consider creating both a OutputConverter[Traversable[_]] as well as a OutputConverter[Array[_]]</p></span></div>
+                                </a>
+                              </div><div class="example_excerpt">
+                                <a href="../core/writing-with-typeclasses/stringsAndCharacters.html">
+                                  <h3>Strings And Characters</h3>
+                                  <div class="example_excerpt_summary"><span> Writing Strings and characters require that codec object is passed to the Output object so that means the &quot;normal&quot; typeclass design cannot be used to implicitely write characters and strings to the Output.  Because of this write,patch,insert,etc...  are overloaded with a typeclass version as well as a version that takes a string.  <p> The result is that writing strings is a simple exercise but writing characters or Traversables of characters is less trivial.  The examples below show how to write strings and characters.  </p></span></div>
+                                </a>
+                              </div><div class="example_excerpt">
+                                <a href="../core/writing-with-typeclasses/customDataTypes.html">
+                                  <h3>Custom Data Types</h3>
+                                  <div class="example_excerpt_summary"><span> Declaring custom converters.  <p>Naturally being able to write objects other than those defined by Scala IO can be beneficial and it is a simple process.  All that is needed is a new implementation of a OutputConverter which is imported into scopoe.  </p><p>The examples below show two design patterns.</p></span></div>
+                                </a>
+                              </div></div>
+                      </div><div class="page">
+                        <a href="../core/seekable/index.html">
+                          <h3>Seekable</h3>
+                          <p class="page_summary"> Seekable permits random access read and write</p>
+                        </a>
+                        <div class="page_examples">
+                        <div class="example_excerpt">
+                                <a href="../core/seekable/patch.html">
+                                  <h3>Patch</h3>
+                                  <div class="example_excerpt_summary"><span> Examples of patching a file.  </span></div>
+                                </a>
+                              </div><div class="example_excerpt">
+                                <a href="../core/seekable/insert.html">
+                                  <h3>Insert</h3>
+                                  <div class="example_excerpt_summary"><span> Inserts data anywhere in the file/seekable object </span></div>
+                                </a>
+                              </div><div class="example_excerpt">
+                                <a href="../core/seekable/append.html">
+                                  <h3>Append</h3>
+                                  <div class="example_excerpt_summary"><span> examples of appending data to the end of a Seekable (In this case files) </span></div>
+                                </a>
+                              </div><div class="example_excerpt">
+                                <a href="../core/seekable/positioningExamples.html">
+                                  <h3>Positioning Examples</h3>
+                                  <div class="example_excerpt_summary"><span> When writing, the unit of the position parameter is not always in bytes.  Rather it is determined by by what type of data is being written.  <div> For example if a string is being written then the position refers to the position in characters.</div></span></div>
+                                </a>
+                              </div><div class="example_excerpt">
+                                <a href="../core/seekable/multipleAccesses.html">
+                                  <h3>Multiple Accesses</h3>
+                                  <div class="example_excerpt_summary"><span> Multiple Random accesses from a file opened only a single time </span></div>
+                                </a>
+                              </div></div>
+                      </div><div class="page">
+                        <a href="../core/standard-java-interop/index.html">
+                          <h3>Standard Java Interop</h3>
+                          <p class="page_summary"> Examples demonstrating how to interoperate with Existing Java libraries</p>
+                        </a>
+                        <div class="page_examples">
+                        <div class="example_excerpt">
+                                <a href="../core/standard-java-interop/basicInteropExamples.html">
+                                  <h3>Basic Interop Examples</h3>
+                                  <div class="example_excerpt_summary"><span> demonstrate a few ways to interoperate existing java APIs </span></div>
+                                </a>
+                              </div></div>
+                      </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="leftcolumn">
+          <div class="innertube">
+            <div id="navcontainer">
+      <ul id="projectnavlist"><li><a href="../core/index.html" title="An idiomatic IO library for Scala" class="active">Core</a>
+          <ul id="navlist"><li><a href="../core/basic-read-write/index.html" title=" These examples are a quick introduction to performing basic IO using the Scala IO API">Basic Read Write</a></li><li><a href="../core/resources/index.html" title=" Examples of using the Resource API to wrap existing Java IO objects">Resources</a></li><li><a href="../core/writing-with-typeclasses/index.html" title=" Details on how output is converted to bytes and how the design can be extended and used">Writing With Typeclasses</a></li><li><a href="../core/seekable/index.html" title=" Seekable permits random access read and write">Seekable</a></li><li><a href="../core/standard-java-interop/index.html" title=" Examples demonstrating how to interoperate with Existing Java libraries">Standard Java Interop</a></li></ul>
+        </li><li><a href="../file/index.html" title="An adaptation of the Java NIO2 Filesystem to Scala" class="">File</a>
+          <ul id="navlist"><li><a href="../file/creating-pathsets/index.html" title=" PathSets is a DSL API for selecting collections of Paths to operate on">Creating Pathsets</a></li><li><a href="../file/create-temp/index.html" title=" Creating Temporary Files and directories ">Create Temp</a></li><li><a href="../file/path-matcher/index.html" title=" Examples of using path matchers, such as IsFile, to select/match files and directories ">Path Matcher</a></li><li><a href="../file/create-and-delete-files-and-directories/index.html" title=" Demonstrate how to create files or directories from a path object">Create And Delete Files And Directories</a></li><li><a href="../file/implicits/index.html" title=" Using implicit conversions to convert between strings Java Files and Scala Paths ">Implicits</a></li><li><a href="../file/file-locking-and-block-execution/index.html" title=" Examples using file locks and executing multiple operations within the context of a single open fil...">File Locking And Block Execution</a></li><li><a href="../file/read-write-files/index.html" title=" A Path are both Input and Output objects as well as Seekable so all read/write options available th...">Read Write Files</a></li><li><a href="../file/create-and-move-files-and-directories/index.html" title=" Demonstrate creating simple paths and moving them withing the filesystem and to other filesystems">Create And Move Files And Directories</a></li><li><a href="../file/create-paths/index.html" title=" Demonstrate various ways of creating Path objects ">Create Paths</a></li><li><a href="../file/roots/index.html" title=" Look up the rots of a path ">Roots</a></li><li><a href="../file/standard-path-operations/index.html" title=" Comparison and queryoperations as well as making new paths relative to a base path">Standard Path Operations</a></li><li><a href="../file/children/index.html" title=" Search the contents of a directory and perform operations on the objects encountered ">Children</a></li></ul>
+        </li></ul>
+    </div>
+          </div>
+        </div>
+
+        <div id="footer">
+          <div>Written by Jesse Eichar <a href="http://camptocamp.com">Camptocamp SA</a></div>
+          <div>Twitter: <a href="http://twitter.com/jeichar">@jeichar</a></div>
+          <div>(c) Jesse Eichar 2010-2011</div>
+        </div>
+      </div>
+      
+    </body>
+  </html>
