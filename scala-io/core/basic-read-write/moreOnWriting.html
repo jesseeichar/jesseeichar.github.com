@@ -32,8 +32,7 @@
     // see codec example for why codec is required
     implicit val codec = Codec.UTF8
 
-    // you can use the implicit conversions of JavaConversions to add the asResource method to certain classes like URL
-    val someFile: Seekable = fromFile(&quot;someFile&quot;)
+    val someFile: Seekable = fromFileString(&quot;someFile&quot;)
 
     // write bytes
     // By default the file write will replace
@@ -74,8 +73,11 @@
         <div id="leftcolumn">
           <div class="innertube">
             <div id="navcontainer">
-      <ul id="projectnavlist"><li><a href="../../core/index.html" title="An idiomatic IO library for Scala" class="active">Core</a>
-          <ul id="navlist"><li>
+      <ul id="projectnavlist">
+        <li><a href="../..//../index.html">Overview</a></li>
+        <li><a href="../../core/index.html" title="An idiomatic IO library for Scala" class="active">Core</a>
+            <a href="../..//core/scaladoc/index.html">(Scaladoc)</a>
+          <ul id="navlist"><li><a href="../../core/access-segment-of-input/index.html" title=" Examples for reading sections of an Input object without reading all data in the underlying resourc...">Access Segment Of Input</a></li><li>
                       <a href="../../core/basic-read-write/index.html" title=" These examples are a quick introduction to performing basic IO using the Scala IO API" class="active">Basic Read Write</a>
                       <ul id="subnavlist"><li>
         <a href="javaToScalaRightWay.html" title=" The right way to convert java IO objects to Scala IO objects " class="">Java To Scala Right Way</a>
@@ -102,8 +104,9 @@
       </li><li>
         <a href="moreOnWriting.html" title=" several examples of writing data " class="active">More On Writing</a>
       </li></ul>
-                    </li><li><a href="../../core/resources/index.html" title=" Examples of using the Resource API to wrap existing Java IO objects">Resources</a></li><li><a href="../../core/writing-with-typeclasses/index.html" title=" Details on how output is converted to bytes and how the design can be extended and used">Writing With Typeclasses</a></li><li><a href="../../core/seekable/index.html" title=" Seekable permits random access read and write">Seekable</a></li><li><a href="../../core/standard-java-interop/index.html" title=" Examples demonstrating how to interoperate with Existing Java libraries">Standard Java Interop</a></li></ul>
+                    </li><li><a href="../../core/input/index.html" title=" One of the core IO classes is called Input">Input</a></li><li><a href="../../core/output/index.html" title=" One of the core IO classes is called Input">Output</a></li><li><a href="../../core/seekable/index.html" title=" Seekable permits random access read and write">Seekable</a></li><li><a href="../../core/resources/index.html" title=" Examples of using the Resource API to wrap existing Java IO objects">Resources</a></li><li><a href="../../core/writing-with-typeclasses/index.html" title=" Details on how output is converted to bytes and how the design can be extended and used">Writing With Typeclasses</a></li><li><a href="../../core/asFooConverter/index.html" title=" Examples for creating Output/Input/ReadChars/WriteChars etc">AsFooConverter</a></li><li><a href="../../core/standard-java-interop/index.html" title=" Examples demonstrating how to interoperate with Existing Java libraries">Standard Java Interop</a></li></ul>
         </li><li><a href="../../file/index.html" title="An adaptation of the Java NIO2 Filesystem to Scala" class="">File</a>
+            <a href="../..//file/scaladoc/index.html">(Scaladoc)</a>
           
         </li></ul>
     </div>
